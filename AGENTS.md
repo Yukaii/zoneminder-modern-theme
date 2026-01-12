@@ -25,5 +25,7 @@ Create and iterate on the ZoneMinder modern userstyle CSS with Stylus-friendly c
 - Minimal, compact controls and status rows to conserve vertical space.
 
 ## Notes
+- This repo only hosts the userstyle overrides.
 - Use the Stylus `@var` domain field for user-specific hosts.
+- Preview ZoneMinder source with `gh` against `https://github.com/ZoneMinder/zoneminder` for selector or markup checks.
 - Avoid hiding the video element at mobile breakpoints.
