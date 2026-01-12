@@ -15,7 +15,7 @@ Create and iterate on the ZoneMinder modern userstyle CSS with Stylus-friendly c
 1. `page.goto` target view URL.
 2. `page.waitForLoadState('load')` before inspection.
 3. Use `getCleanHTML` or `page.evaluate` for selectors.
-4. Inject CSS via `page.addStyleTag`.
+4. Inject CSS by stripping the `@-moz-document` wrapper manually.
 5. Validate using `screenshotWithAccessibilityLabels`.
 
 ## Style Targets
@@ -29,3 +29,4 @@ Create and iterate on the ZoneMinder modern userstyle CSS with Stylus-friendly c
 - Use the Stylus `@var` domain field for user-specific hosts.
 - Preview ZoneMinder source with `gh` against `https://github.com/ZoneMinder/zoneminder` for selector or markup checks.
 - Avoid hiding the video element at mobile breakpoints.
+- Playwriter inject snippet: `let css = fs.readFileSync('./zoneminder-modern.user.css','utf-8'); css = css.replace(/\/\*[\s\S]*?\*\//, '').replace(/@-moz-document[^\{]*\{/, '').replace(/\}\s*$/, '').trim(); await page.addStyleTag({ content: css });`

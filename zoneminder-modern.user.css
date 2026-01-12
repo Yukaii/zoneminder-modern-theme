@@ -89,6 +89,7 @@
     width: 100%;
     border-collapse: collapse;
     color: var(--zm-text);
+    margin-inline: auto;
   }
 
   table th,
@@ -102,13 +103,77 @@
     color: var(--zm-text-muted);
     font-weight: 600;
     text-align: left;
+    background: rgba(15, 23, 42, 0.8);
+  }
+
+  table td {
+    background: rgba(15, 23, 42, 0.4);
+  }
+
+  table.table-sm th,
+  table.table-sm td,
+  table.table-condensed th,
+  table.table-condensed td {
+    padding: 6px 8px;
+  }
+
+  table.table-borderless th,
+  table.table-borderless td {
+    border-bottom: none;
   }
 
   .table-striped tbody tr:nth-child(even) {
     background: rgba(15, 23, 42, 0.4);
   }
 
+  .table-striped tbody tr:nth-child(even) td {
+    background: rgba(15, 23, 42, 0.5);
+  }
+
+  table tbody tr.highlight,
+  table tbody tr.active {
+    background: rgba(56, 189, 248, 0.12);
+  }
+
+  table tbody tr.highlight td,
+  table tbody tr.active td {
+    background: rgba(56, 189, 248, 0.12);
+  }
+
+  .table-responsive,
+  .bootstrap-table {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(31, 41, 55, 0.6);
+    border-radius: 12px;
+    padding: 8px;
+    margin-inline: auto;
+  }
+
+  .table-responsive table,
+  .bootstrap-table table {
+    margin-bottom: 0;
+  }
+
+  .bootstrap-table .fixed-table-container {
+    border: 1px solid rgba(31, 41, 55, 0.6);
+    border-radius: 10px;
+    background: rgba(15, 23, 42, 0.4);
+  }
+
+  .bootstrap-table .fixed-table-header {
+    background: rgba(15, 23, 42, 0.8);
+    border-bottom: 1px solid rgba(31, 41, 55, 0.6);
+  }
+
+  .bootstrap-table .fixed-table-body {
+    background: transparent;
+  }
+
   .table-hover tbody tr:hover {
+    background: rgba(56, 189, 248, 0.08);
+  }
+
+  .table-hover tbody tr:hover td {
     background: rgba(56, 189, 248, 0.08);
   }
 
@@ -212,10 +277,21 @@
   table.major,
   table.table-bordered,
   #logTable,
-  #contentTable {
+  #logsTable,
+  #contentTable,
+  #consoleTable,
+  #eventTable,
+  #eventList,
+  #reportsTable,
+  #devicesTable,
+  #controlTable,
+  #leasesTable,
+  #groupModalTable,
+  #AddMonitorsTable {
     background: rgba(15, 23, 42, 0.5);
     border-radius: 12px;
     overflow: hidden;
+    margin-inline: auto;
   }
 
   .nav-pills.flex-column {
